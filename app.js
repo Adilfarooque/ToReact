@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-const elem = <span>React Element </span>
+const ele = <span>Is it ture</span>
 
 //React Element
-const title =  (
+const title = (
     <div id="container1">
-        {elem}
-        <h1 className="head">THE HEAD TITLE 🚀</h1>
+        {ele}
+        <h1>Make some noice......!</h1>
     </div>
 );
 
@@ -18,13 +18,12 @@ const title =  (
 //Fuctional Component - New way of writing code.
 
 //Component Composition
-const Heading = () => (
+const Heading = () =>(
     <div id="container2">
-        {title}
-        <h1 id="heading"> Make some noice </h1>
+        <h2 id="heading">It a new thing</h2>
     </div>
-)
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Heading/>);
+root.render(<>{title}<Heading/></>);
