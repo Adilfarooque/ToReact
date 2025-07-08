@@ -10,27 +10,29 @@ import ReactDOM from "react-dom/client";
 * - RestrauntList
 *   - RestrauntCard
 *       - Image
-*       - Name
-*       - Rating
+*       - Name Restaurant
+*       - Rating⭐️
 *       - Cusines
+*       - Delivery Time
 *Footer
 * - Copyright
 * - Links
 * - Address
 * - Contacts
 */
-const Header = () => {
+
+const Header = () =>{
     return(
         <div className="header">
-            <div>
-                <img className="logo" src="https://w7.pngwing.com/pngs/664/210/png-transparent-uber-eats-muncheez-delivery-online-food-ordering-food-delivery-food-logo-uber-eats.png"/>
+            <div className="logo">
+                <img src="https://thumbs.dreamstime.com/b/food-delivery-logo-template-vector-icon-illustration-170869600.jpg" alt="logo"/>
             </div>
             <div className="nav-items">
                 <ul>
                     <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li><img  className="cart_logo"src="https://img.icons8.com/?size=100&id=13014&format=png&color=000000"/></li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li><img src="https://img.icons8.com/?size=100&id=23072&format=png&color=000000" alt="cart-logo"/></li>
                 </ul>
             </div>
         </div>
@@ -38,15 +40,53 @@ const Header = () => {
 }
 
 
-const AppLayout = () => {
+
+const RestrauntList = () => {
     return(
-        <div className="app">
-            <Header/>
+        <div className="resto-card">
+            <div><img  className="resto-img" src="https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg"/></div>
+            <div className="resto-info">
+                <h3>Moonimist</h3>
+                <p>Burger, Dubai , Asia</p>
+                <p>4.5</p>
+                <p>Time: 20-30 mins</p>
+            </div>
         </div>
     )
 }
 
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search-bar">
+            <input type="text" placeholder="Search for restraunts"/>
+            <button type="submit">Search</button>
+            </div>
+            <RestrauntList/>
+            <RestrauntList/>
+            <RestrauntList/>
+        </div>
+    )
+}
+
+const Footer = () => {
+    return(
+        <div className="footer">
+            <p>Copyright &copy; 2023. All Rights Reserved.</p>
+        </div>  
+    )
+}
+
+const AppLayout =  () => {
+    return (
+        <div className="app">
+            <Header/>
+            <Body/>
+            <Footer/>
+        </div>
+    )
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout/>);
-
+root.render(<AppLayout/>)

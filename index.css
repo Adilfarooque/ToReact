@@ -2,39 +2,63 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width:100%;
+}
+.logo img{
+    width: 100px;
+}
+.nav-items ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.nav-items ul li img{
+    width: 30px;
+}
+
+.nav-items ul li{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.resto-card{
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
     border-radius: 10px;
 }
 
-.logo{
-    width: 70px;
-    margin-left: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.resto-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.nav-items > ul {
-    display: flex;
-    padding: 0 20px;
-    list-style-type: none;
-}
-.nav-items > ul > li {
-    margin: 10px;
-    padding:6px;
+.resto-card h3{
     font-size: 20px;
     font-weight: 500;
-}
-
-.cart_logo{
-    width: 40px;
-    margin-right: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px; 
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border-radius: 5px;
 }
-.cart_logo:hover{
-    transform: scale(1.1);
+
+.resto-card h3:hover{
+    color: #ff7700;
+}
+
+.body{
+    display: flex;
+    justify-content: space-between;
 }
